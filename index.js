@@ -41,7 +41,6 @@ const renderPuppies = () => {
 }
 
 const renderSinglePuppyDetails = () => {
-  //create variable if statement on team name number state.singlePuppyDetails.teamId
   let teamName = state.singlePuppyDetails.teamId;
   if (teamName === 3678) {
     teamName = `Fluff`;
@@ -50,7 +49,7 @@ const renderSinglePuppyDetails = () => {
   }
 
   const puppyDetailsHTML = `
-  <h3>${state.singlePuppyDetails.name}</h3>
+  <h1>${state.singlePuppyDetails.name}</h1>
   <section id="bio">
   <div id="left">
   <p>Breed: ${state.singlePuppyDetails.breed}</p>
