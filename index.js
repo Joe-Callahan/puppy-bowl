@@ -2,9 +2,8 @@ const state = {
   puppyList: [],
   singlePuppyDetails: {}
 }
-
-const main = document.querySelector(`main`);
 const header = document.querySelector(`header`);
+const main = document.querySelector(`main`);
 
 const getPuppies = async() => {
   const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2501-ftb-et-web-ft/players`);
@@ -15,7 +14,7 @@ const getPuppies = async() => {
 }
 
 const renderPuppies = () => {
-  main.innerHTML = ``;
+  main.innerHTML = `<img id="main-image" src="./main-image/puppy-bowl-pic.jpg" />`;
   const header = document.querySelector(`header`);
   header.innerHTML = `<h1>Puppy Bowl</h1>`;
   const form = document.createElement(`form`);
@@ -52,14 +51,16 @@ const renderSinglePuppyDetails = () => {
 
   const puppyDetailsHTML = `
   <h3>${state.singlePuppyDetails.name}</h3>
+  <section id="bio">
   <div id="left">
   <p>Breed: ${state.singlePuppyDetails.breed}</p>
   <p>Team: ${teamName}</p>
   <p>Status: ${state.singlePuppyDetails.status}</p>
   </div>
   <div id="right">
-  <img src="${state.singlePuppyDetails.imageUrl}" />
+  <img class="bio-image" src="${state.singlePuppyDetails.imageUrl}" />
   </div>
+  </section>
   `;
 
   const button = document.createElement(`button`);

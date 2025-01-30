@@ -1,0 +1,32 @@
+body {
+  background-color: navy;
+}
+
+header {
+  background-color: white;
+}
+
+main {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-image {
+  height: 40vh;
+  width: 80vw;
+}
+
+h3 {
+  text-align: center;
+}
+
+#bio {
+  display:flex;
+}
+
+.bio-image {
+  height: 35vh;
+  width: 30vw;
+}
