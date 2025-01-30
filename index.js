@@ -19,9 +19,10 @@ const renderPuppies = () => {
   const header = document.querySelector(`header`);
   header.innerHTML = `<h1>Puppy Bowl</h1>`;
   const form = document.createElement(`form`);
-  form.innerText = `Choose a player`;
   const select = document.createElement(`select`);
-
+  const option = document.createElement(`option`);
+  option.innerText = `Choose a Puppy`;
+  select.append(option);
   state.puppyList.forEach((singlePuppy) => {
     const option = document.createElement(`option`);
     option.innerText = singlePuppy.name;
